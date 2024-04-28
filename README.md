@@ -1,74 +1,69 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Prueba concepto - Laravel9 & Restdb.io
+Introducción
+Este repositorio contiene una aplicación web usada como prueba concepto "basico"; de un app administrador de empleados, las funciones elementales son realizadas son:
+Crear nuevos empleados, Consultar todos los empleados previamente creados y modificar varios campos de cada empleado segun corresponda, adicionalmente
+presenta algunas validaciones en los campos de entrada y una generación del correo electronico la cual es tomada del nombre y el apellido del usuario.
 
-## Replit setup
-1. run `php artisan key:generate` to generate an unique key for your project
-1. set environment variables in `.laravel.env`
-1. ▶ Run
+Desde el punto de vista tecnico el frontend y el controller fue elaborado sobre Laravel9 y la base de datos esta on cloud; esta es consumida mediante
+llamadas Rest API.
 
-**Laravel doesn't support replit's database,
-so you have to use an external database :(**
+## Instalación
+#### Nota. debe tener instalado docker o docker desktop en su entorno
+1. Clone este repositorio en su local: ```git clone https://github.com/samuelngarciar/laravel9-test-concept.git```
+2. Entre en el directorio generado: ```cd laravel9-test-concept```
+3. Compile la imagen docker: ```docker build -t laravelpruebac .```
+4. Ejecute una instancia docker: ```docker run -d -p 8200:8000 laravelpruebac```
+#### Nota confirme que su puerto "8200" este libre, de lo contrario use otro puerto disponible
+5. Abra el navegador web de su preferencia y escriba: http://localhost:8200/
+![image](https://github.com/samuelngarciar/laravel9-test-concept/assets/84947793/d63a9ff5-5a36-4182-af84-561be31a1e6a)
 
-----
+## Evidencias de uso
+#### Nota. Los formularios solo les fue incluido las validaciones más basicas
+1. Incluir a nuevo empleado:
+![image](https://github.com/samuelngarciar/laravel9-test-concept/assets/84947793/681b45e6-821e-4d52-b20b-0d0555bec9a6)
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+1.1 Respuesta OK
+![image](https://github.com/samuelngarciar/laravel9-test-concept/assets/84947793/fa0b6e3b-a8d8-4ff5-aec0-d2e1d99ffb19)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+2. Consultar y actualizar
+   ![image](https://github.com/samuelngarciar/laravel9-test-concept/assets/84947793/1e9defd5-acaa-4d79-b6c6-45645b760d94)
+2.1 Validaciones de campos
+   ![image](https://github.com/samuelngarciar/laravel9-test-concept/assets/84947793/2aa8c911-a469-4b55-90e3-34d4dd258fe6)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+## Anexo - I
+### Extructura de directorios para el codigo fuente
+### Controllers
+![image](https://github.com/samuelngarciar/laravel9-test-concept/assets/84947793/25139830-9388-4466-8c71-0d74304b2d0f)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Views
+![image](https://github.com/samuelngarciar/laravel9-test-concept/assets/84947793/bcab3dbc-e7d2-4c46-892b-d841d87980b5)
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### Routes
+![image](https://github.com/samuelngarciar/laravel9-test-concept/assets/84947793/faa96fa0-5046-40ef-9cb0-cd9f544b5e15)
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
 
-## Contributing
+## Anexo - II
+### Evidencia de docker corriendo correctamente
+![image](https://github.com/samuelngarciar/laravel9-test-concept/assets/84947793/67c51a36-05ac-47ef-a647-c816cda85bda)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
+## Anexo - III
+### Evidencia de consultas REST API a la base de datos
+![image](https://github.com/samuelngarciar/laravel9-test-concept/assets/84947793/1dba1a6c-3f36-477d-8b10-ea6847895919)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+
+
+
